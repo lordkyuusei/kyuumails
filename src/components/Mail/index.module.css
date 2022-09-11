@@ -1,0 +1,11 @@
+.mail__unit {
+    flex: 3;
+}
+
+.unit__content {
+    height: 100vh;
+    overflow-y: auto;
+    width: 100%;
+    border: none;
+    padding: 1em;
+}

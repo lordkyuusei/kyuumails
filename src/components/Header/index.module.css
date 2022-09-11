@@ -1,0 +1,37 @@
+.header {
+    height: 4em;
+    display: flex;
+}
+
+.mail__new-message,
+.mail__options,
+.mail__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mail__new-message {
+    height: 100%;
+    background-color: #02c386;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5em 1.5em;
+    flex: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+.mail__new-message:hover {
+    background-color: #00d491;
+    transition: all 0.2s ease-in-out;
+}
+
+.mail__options {
+    flex: 2;
+    background-color: #f4f7f9;
+}
+
+.mail__buttons {
+    flex: 3;
+}

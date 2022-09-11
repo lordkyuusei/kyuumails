@@ -1,0 +1,14 @@
+.mail__list {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #f4f7f9;
+    scrollbar-width: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

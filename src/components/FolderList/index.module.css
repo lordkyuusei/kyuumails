@@ -1,0 +1,30 @@
+.folder__list {
+    flex: 1;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.folder__list ul {
+    padding: 0;
+}
+
+.folder__list ul li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 0.5em 1em;
+    transition: all 0.2s ease-in-out;
+}
+
+.folder__list ul li:hover {
+    cursor: pointer;
+    background-color: grey;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.list__selected {
+    background-color: grey;
+    color: white;
+}
