@@ -26,8 +26,13 @@ const handleResponse = (response: any) => {
 
 const getTokenPopup = async (request: any) => {
     request.account = selectAccount()?.username;
-    const response = await msalObj.acquireTokenSilent(request);
-    return response.accessToken;
+    try {
+        const response = await msalObj.acquireTokenSilent(request);
+        return response.accessToken;
+    } catch (err) {
+        const response = await msalObj.acquireTokenPopup(request);
+        return response.accessToken;
+    }
 }
 
 const callMSGraph = async (endpoint: string, token: string) => {

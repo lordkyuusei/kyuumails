@@ -4,6 +4,10 @@
     overflow-y: auto;
 }
 
+.folder__list-item-mobile {
+    display: none;
+}
+
 .folder__list ul {
     padding: 0;
 }
@@ -27,4 +31,22 @@
 .list__selected {
     background-color: grey;
     color: white;
+}
+
+@media screen and (max-width: 900px) {
+    .folder__list {
+        flex: 0.25;
+    }
+
+    .folder__list ul li {
+        padding: 1em 0;
+    }
+
+    .folder__list-item-desktop {
+        display: none !important;
+    }
+
+    .folder__list-item-mobile {
+        display: block;
+    }
 }

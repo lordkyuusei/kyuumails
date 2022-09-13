@@ -32,14 +32,19 @@ const FolderList = () => {
         <section class={styles["folder__list"]}>
             <ul>
                 <For each={folders()}>{(folder) =>
-                    <li classList={{ [styles["list__selected"]]: selected() === folder.id }} onClick={() => requestMails(folder.id)}>
-                        <span>
-                            {folder.displayName}
-                        </span>
-                        <span>
-                            {folder.unreadItemCount}
-                        </span>
-                    </li>
+                    <>
+                        <li classList={{ [styles["folder__list-item-desktop"]]: true, [styles["list__selected"]]: selected() === folder.id }} onClick={() => requestMails(folder.id)}>
+                            <span>
+                                {folder.displayName}
+                            </span>
+                            <span>
+                                {folder.unreadItemCount}
+                            </span>
+                        </li>
+                        <li classList={{ [styles["folder__list-item-mobile"]]: true, [styles["list__selected"]]: selected() === folder.id }} onClick={() => requestMails(folder.id)} title={`${folder.displayName}`}>
+                            <button>📧</button>
+                        </li>
+                    </>
                 }</For>
             </ul>
         </section>
