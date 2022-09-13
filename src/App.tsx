@@ -1,9 +1,7 @@
 import { Component, createSignal, lazy, onMount } from 'solid-js';
 
 import { useRoutes } from '@solidjs/router';
-import styles from './App.module.css';
-import { login, getMails, getProfile } from './lib/services/office365/msal';
-import MailPreview from './components/MailPreview/index';
+import { login, getMails } from './lib/services/office365/msal';
 
 const signIn = async () => {
   const response = await login();
@@ -18,7 +16,7 @@ const routes = [
   {
     path: '/api/oauth',
     component: lazy(() => import('./features/home')),
-  }
+  },
 ]
 
 const App: Component = () => {
