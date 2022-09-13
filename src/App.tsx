@@ -3,11 +3,6 @@ import { Component, createSignal, lazy, onMount } from 'solid-js';
 import { useRoutes } from '@solidjs/router';
 import { login, getMails } from './lib/services/office365/msal';
 
-const signIn = async () => {
-  const response = await login();
-  console.log(response);
-}
-
 const routes = [
   {
     path: '/',
