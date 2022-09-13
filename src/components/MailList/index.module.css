@@ -9,6 +9,12 @@
     scrollbar-width: 0;
 }
 
+.mail__date {
+    background-color: hsl(270, 18%, 80%);
+    height: 50px;
+    margin: 0;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }

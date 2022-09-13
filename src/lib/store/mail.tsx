@@ -1,6 +1,7 @@
 import { createStore } from "solid-js/store";
 
-export const [mails, setMails] = createStore([]);
+const template: any[] = [];
+export const [mails, setMails] = createStore(template);
 export const [mail, setMail] = createStore({
     id: "0",
     subject: "",

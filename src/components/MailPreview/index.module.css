@@ -17,20 +17,18 @@
 
 .mail-preview__header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 0;
+    justify-content: flex-start;
     margin-bottom: 20px;
 }
 
-.mail-preview__header__title {
-    font-size: 20px;
-    font-weight: 600;
+.mail-preview__header__from {
+    font-weight: boldest;
 }
 
-.mail-preview__header__date {
-    font-size: 14px;
-    font-weight: 400;
+.mail-preview__header__subject {
+    font-weight: bold;
 }
 
 .mail-preview__body {
@@ -45,10 +43,15 @@
 .mail-preview__footer {
     display: flex;
     flex: 1;
-    place-content: space-between;
+    place-content: flex-end;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 10px;
+}
+
+.mail-preview__footer__date {
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .mail-preview__selected {
